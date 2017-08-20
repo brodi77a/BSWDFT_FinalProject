@@ -22,6 +22,29 @@ db.once('open', function() {
 
 const User= require('./models/Users')
 
+app.get('/users', (req, res) => {
+    User.find({})
+
+    .then(users => {
+        res.json(users)
+    })
+
+    .catch(err => {
+        console.log(err)
+    });
+})
+
+app.get('/users/:objectId', (req,res) => {
+    User.findById(req.params.objectId)
+        .then(user => {
+            res.json(user);
+        })
+        .catch(err => {
+            res.status(400)
+                .json({err})
+        })
+});
+
 app.post('/users', (req, res) => {
     console.log(req.body.newProfile)
     let object= req.body.newProfile

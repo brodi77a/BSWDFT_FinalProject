@@ -15,7 +15,7 @@ ReactDOM.render((
         <Route path= '/' component= {App}>
             <IndexRoute component= {Alumni}/>
             <Route path= 'createprofile' component={CreateProfile} ></Route>
-            <Route path= 'profile:id' component={Profile}></Route>
+            <Route path= 'profile/:id' component={Profile}></Route>
         </Route>
    </Router> 
 ), document.getElementById('root'));

@@ -19,9 +19,23 @@ class App extends Component {
         Project_snapShot_URL: '',
         Project_Title:'',
         Description: ''
-    }
-          
-    };
+    },
+       users: {}    
+  }
+   axios.get('http://localhost:8080/users')
+  
+          .then(result => {
+            console.log(result)
+            this.setState({
+              users: result.data
+            })
+          })
+
+          .catch(err => {
+            console.log('error')
+          });
+
+
     //Do not forget the bindings for the methods
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -38,17 +52,17 @@ class App extends Component {
   handleClick(event) {
     event.preventDefault();
     console.log(this.state.newProfile);
-      axios.post('http://localhost:8080/users', {
-        newProfile: this.state.newProfile
-      })
+        axios.post('http://localhost:8080/users', {
+          newProfile: this.state.newProfile
+        })
 
-      .then(result => {
-        console.log('data', result.data);
-      })
+        .then(result => {
+          console.log('data', result.data);
+        })
 
-      .catch((error) => {
-        console.log('error');
-      });
+        .catch((error) => {
+          console.log('error');
+        });
 
       this.setState(
         {newProfile:  
@@ -62,17 +76,21 @@ class App extends Component {
             Project_snapShot_URL: '',
             Project_Title:'',
             Description: ''
-          }
-        });
-      }
+          },
+          users: {}
+        }
+      );
+    }
 
   render() {
+      
     return (
       <div className="App-Intro">
 
         {React.cloneElement(this.props.children,
           {
             profile: this.state.newProfile,
+            users: this.state.users,
             handleChange: this.handleChange,
             handleClick: this.handleClick
           }
