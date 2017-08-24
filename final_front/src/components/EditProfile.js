@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import {Link} from 'react-router';
 import Form from './Form'
-import { Button, Dropdown, Navbar, NavItem, Row, Col } from 'react-materialize';
+import {Button, Preloader, Dropdown, Navbar, NavItem, Row, Col} from 'react-materialize'
 import '../App.css';
 
-class CreateProfile extends Component {
-
+class EditProfile extends Component {
     render() {
 
+        
+        console.log(this.props.users)
         return (
             <div>
 
                 <Navbar fixed className='navbar'>
-                    <NavItem><Link to='/'>Alumnis</Link></NavItem>
+                    <NavItem><Link to='/'>Alumni Page</Link></NavItem>
                 </Navbar>
 
                 <div className='App'>
@@ -25,15 +26,17 @@ class CreateProfile extends Component {
 
                             </div>
                             <Form {...this.props} />
-                        
+                            <span className="input-group-btn">
+                                <Button  waves='light' type='submit'>Edit</Button>
+                            </span>
                         </Col>
                         <Col s={3}></Col>
                     </Row>
                 </div>
 
             </div>
-        );
+        )
     }
 }
 
-export default CreateProfile;
+export default EditProfile;

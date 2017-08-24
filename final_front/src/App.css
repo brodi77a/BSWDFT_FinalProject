@@ -13,15 +13,23 @@
 }
 
 .img-border {
-  border: solid 5px #4286f4;
+  border: solid 8px #4286f4;
 }
 
-.margin-alumni {
-  margin-top: 5%;
+#margin-alumni {
+  margin-top: 50px;
 }
 
-.margin-frame {
-  margin: 10% 0 0 25%;
+#icons {
+  margin: 5% 0px 30px 0px;
+}
+
+.margin-frame  {
+  margin: 10% 0 0 20%;
+}
+
+#github-link {
+  margin-left: 3%;
 }
 /* 
 @keyframes App-logo-spin {
@@ -32,4 +40,67 @@
 
 .img-circle {
   border-radius: 50%
+}
+
+#quotation-left {
+  margin: 10% 0 0 20%;
+}
+
+#quotation-right {
+  float: right;
+  margin-right: 20%
+}
+
+#projectSnapshot {
+  margin-top: 50%;
+  width: 70%;
+  height: 40%;
+  
+}
+
+.projectSnapshot3 {
+  margin-top:50%;
+  width: 70%;
+  height: 40%;
+}
+
+#alumni-p {
+  text-align: justify;
+  font-size: 2.5em;
+  margin: 2% 25% 2% 25%;
+  text-shadow: 2px 2px black;
+}
+
+#projectTitle1 {
+  margin-top: 0.5%;
+  font-size:1.2em;
+}
+
+#delete-button {
+  margin: 5% 0% 10% 0%;
+  font-size: 30px;
+}
+
+#iframe-margin {
+  margin: 3% 0 0 2.3%;
+} 
+
+.delete-button {
+  background-color: red;
+  padding: 1.5% 2% 3.9% 2%;
+  border-radius: 10px;
+}
+
+.h1-profile, #alumni-p {
+  font-family: Josefin Sans;
+}
+
+#description{
+  background: pink;
+  padding: 1% 0 17% 0;
+  margin-top: 5%;
+}
+
+#alumIntroDiv {
+  background-color: black;
 }

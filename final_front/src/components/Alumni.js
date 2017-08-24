@@ -18,9 +18,10 @@ class Alumni extends Component {
 
         } else {
             profiles = this.props.users.map((user, i) => {
-                return <Col key={i} s={3}>
+                return <Col key={i} s={3} className='text' id='margin-alumni'>
                     <Link to={`profile/${user._id}`}>
-                        <img src={this.props.users[i].Photo_URL} width='170' height='170' className='img-circle img-border' />
+                        <img 
+                        src={this.props.users[i].Photo_URL} width='200' height='200' className='img-circle img-border' />
                     </Link>
                     <h4>{this.props.users[i].Alumni}</h4>
                     <h6>{this.props.users[i].School}</h6>
@@ -34,7 +35,7 @@ class Alumni extends Component {
                     <NavItem><Link to='/createprofile'>Create Profile</Link></NavItem>
                 </Navbar>
                 <div>
-                    <Row className='text margin-alumni'>
+                    <Row>
                         {profiles}
                     </Row>
                 </div>
