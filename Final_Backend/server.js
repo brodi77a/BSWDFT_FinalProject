@@ -3,6 +3,7 @@ const express= require ('express'),
         bodyParser= require ('body-parser'),
         mongoose= require ('mongoose'),
         path= require ('path');
+        PORT=  process.env.PORT || 8080
         
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -62,21 +63,21 @@ app.post('/users', (req, res) => {
              });
 })
 
-app.put('/users/:objectId', (req, res) => {
-    let query= {'_id': req.params.objectId}
+// app.put('/users/:objectId', (req, res) => {
+//     let query= {'_id': req.params.objectId}
 
-    console.log(query);
-    User.findOneAndUpdate(query, req.body ,{ new:true})
-        .then(updatedObject => {
-            console.log(updatedObject);
-            res.json(updatedObject);
-        })
-        .catch(err => {
-            console.log(err)
-            res.status(400)
-                .json({err});
-        })
-    })
+//     console.log(query);
+//     User.findOneAndUpdate(query, req.body ,{ new:true})
+//         .then(updatedObject => {
+//             console.log(updatedObject);
+//             res.json(updatedObject);
+//         })
+//         .catch(err => {
+//             console.log(err)
+//             res.status(400)
+//                 .json({err});
+//         })
+//     })
 
     app.delete('/users/:objectId',(req, res) => {
         User.findOneAndRemove({'_id': req.params.objectId})
@@ -92,7 +93,7 @@ app.put('/users/:objectId', (req, res) => {
 
 
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     console.log('I am the backbone to this project!');
 })
 
