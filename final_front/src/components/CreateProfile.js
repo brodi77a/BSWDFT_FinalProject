@@ -11,8 +11,8 @@ class CreateProfile extends Component {
         return (
             <div>
 
-                <Navbar fixed className='navbar'>
-                    <NavItem><Link to='/'>Alumnis</Link></NavItem>
+                <Navbar fixed className='navbar' right>
+                    <NavItem><Link to='/'>Alumnus</Link></NavItem>
                 </Navbar>
 
                 <div className='App'>
@@ -21,10 +21,10 @@ class CreateProfile extends Component {
                         <Col s={3}></Col>
                         <Col s={6}>
                             <iframe className='margin margin-frame img-border' width="350" height="350" src="https://clyp.it/recording-widget" frameBorder="0" style={{ borderRadius: '4px' }}></iframe>
-                            <div className='App'>
-
+                            <div className='App form'>
+                                <Form {...this.props} />  
                             </div>
-                            <Form {...this.props} />
+                            
                         
                         </Col>
                         <Col s={3}></Col>

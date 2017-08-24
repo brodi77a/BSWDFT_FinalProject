@@ -28,11 +28,11 @@ class Form extends Component {
                         <div><Input s={7}   name='Project_snapShot_URL3' value={profile.Project_snapShot_URL3} onChange={this.props.handleChange} type='text' label="Project Snapshot URL 3" /></div>
                         <div><Input s={5}   name='Project_Title3' type='text' value={profile.Project_Title3} onChange={this.props.handleChange} label="Project Title 3" /></div>
 
-                        <textarea name='Description' className="materialize-textarea" placeholder= 'Description' value={profile.Description} onChange={this.props.handleChange}></textarea>
+                        <textarea name='Description' id= 'textarea' className="materialize-textarea" placeholder= 'Description' value={profile.Description} onChange={this.props.handleChange}></textarea>
                     </Row>
 
                     <span className="input-group-btn">
-                        <Link to='/'><Button onClick={this.props.handleClick} waves='light' type='submit'>Submit</Button></Link>
+                        <Link to='/'><Button id= 'submit-button' onClick={this.props.handleClick} waves='light' type='submit'>Submit Profile</Button></Link>
                     </span>
 
                 </div>

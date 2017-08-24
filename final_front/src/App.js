@@ -23,7 +23,7 @@ class App extends Component {
       },
       users: {}
     }
-    axios.get('http://localhost:8080/users')
+    axios.get('/users')
 
       .then(result => {
         console.log(result)
@@ -55,7 +55,7 @@ class App extends Component {
   handleClick(event) {
     event.preventDefault();
 
-    axios.post('http://localhost:8080/users', {
+    axios.post('/users', {
       newProfile: this.state.newProfile
     })
 
@@ -89,7 +89,7 @@ class App extends Component {
 
 
   handleDelete(event, id) {
-      axios.delete(`http://localhost:8080/users/${id}`)
+      axios.delete(`/users/${id}`)
 
       .then(deletedObject => {
         console.log(deletedObject);

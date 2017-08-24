@@ -4,6 +4,19 @@ import '../App.css';
 import { Navbar, NavItem, Button, Row, Col , Preloader} from 'react-materialize'
 
 class Alumni extends Component {
+    // constructor () {
+    //     super();
+        
+    //     this.searchFunc = this.searchFunc.bind(this);
+
+    //     }
+
+     searchFunc() {
+            console.log('Hello');
+            console.log(this.props.users.indexOf(document.getElementById('search-input').val));
+     }
+            
+                    
     render() {
         //declaring an empty global variable for later use
         let profiles;
@@ -31,11 +44,19 @@ class Alumni extends Component {
         }
         return (
             <div>
-                <Navbar className='navbar' brand='SPEACHY' right>
-                    <NavItem><Link to='/createprofile'>Create Profile</Link></NavItem>
-                </Navbar>
                 <div>
-                    <Row>
+                    <div id='alumIntroDiv' className= 'typewriter'>
+                        <h1 className='h1-introText'>Speach.ly</h1>
+                        <span className="input-group-btn">
+                        <Link to='createprofile'><Button id= 'button-introDiv' waves='light'>Create Your Profile</Button></Link>
+                        {/* <form id= 'search'> 
+                            <input id= 'search-input'></input><Button id= 'search-button' waves='light' onClick= {(event) => {event.preventDefault(); this.searchFunc();}} >Search</Button>
+                        </form> */}
+                    </span>
+                    </div>
+                </div>
+                <div>
+                    <Row id= 'alumni-names'>
                         {profiles}
                     </Row>
                 </div>

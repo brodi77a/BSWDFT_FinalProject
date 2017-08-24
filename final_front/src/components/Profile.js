@@ -27,7 +27,7 @@ class Profile extends Component {
         return (
             <div>
                 <Navbar className= 'navbar' fixed>
-                    <NavItem><Link to='/'>Alumni Page</Link></NavItem>
+                    <NavItem><Link to='/'>Alumnus</Link></NavItem>
                 </Navbar>
 
                
@@ -58,18 +58,18 @@ class Profile extends Component {
 
                         <Row className= 'text'>
                             <Col s={4}>
-                                <img id='projectSnapshot' src={users.Project_snapShot_URL}/>
-                                <div id= 'projectTitle1'>{users.Project_Title}</div>
+                                <img id='projectSnapshot' src={users.Project_snapShot_URL1}/>
+                                <div id= 'projectTitle'>{users.Project_Title1}</div>
                             </Col>
 
                             <Col s={4}>
-                                <img id='projectSnapshot' src={users.Project_snapShot_URL}/>
-                                <div id= 'projectTitle1'>{users.Project_Title}</div>
+                                <img id='projectSnapshot' src={users.Project_snapShot_URL2}/>
+                                <div id= 'projectTitle'>{users.Project_Title2}</div>
                             </Col>
 
                             <Col s={4}>
-                                <img  className= 'projectSnapshot3' src={users.Project_snapShot_URL}/>
-                                <div id= 'projectTitle1'>{users.Project_Title}</div>
+                                <img  className= 'projectSnapshot3' src={users.Project_snapShot_URL3}/>
+                                <div id= 'projectTitle'>{users.Project_Title3}</div>
                             </Col>
                         </Row>
                         
@@ -78,8 +78,8 @@ class Profile extends Component {
                             <Link to={`editprofile/${users._id}`}><Button>Edit Profile</Button></Link>
                         </span> */}
 
-                        <div  id='delete-button' className="input-group-btn text">
-                            <Button className='delete-button' onClick={(event) => this.props.handleDelete(event, users._id)}>Delete Profile</Button>
+                        <div className="input-group-btn text">
+                            <Button id='delete-button' onClick={(event) => this.props.handleDelete(event, users._id)}>Delete Profile</Button>
                         </div>
                     
 

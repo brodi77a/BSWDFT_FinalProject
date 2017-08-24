@@ -1,10 +1,12 @@
 const express= require ('express'),
         app= express(),
         bodyParser= require ('body-parser'),
-        mongoose= require ('mongoose');
+        mongoose= require ('mongoose'),
+        path= require ('path');
         
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(path.resolve(__dirname + './../final_front/build')))
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -92,4 +94,8 @@ app.put('/users/:objectId', (req, res) => {
 
 app.listen(8080, () => {
     console.log('I am the backbone to this project!');
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname + './../final_front/build/index.html'))
 })
