@@ -21,7 +21,7 @@ class Form extends Component {
                         <div><Input s={12}  name='Github' type='text' value={profile.Github} onChange={this.props.handleChange} label="Github" /></div>
                         <div><Input s={12}  name='LinkedIn' type='text' value={profile.LinkedIn} onChange={this.props.handleChange} label="LinkedIn" /></div>
                         <div><Input s={12}  name='Twitter' type='text' value={profile.Twitter} onChange={this.props.handleChange} label="Twitter" /></div>
-                        <div><Input s={7}   name='Project_snapShot_URL1' value={profile.Project_snapShot_URL} onChange={this.props.handleChange} type='text' label="Project Snapshot URL 1" /></div>
+                        <div><Input s={7}   name='Project_snapShot_URL1' value={profile.Project_snapShot_URL1} onChange={this.props.handleChange} type='text' label="Project Snapshot URL 1" /></div>
                         <div><Input s={5}   name='Project_Title1' type='text' value={profile.Project_Title1} onChange={this.props.handleChange} label="Project Title 1" /></div>
                         <div><Input s={7}   name='Project_snapShot_URL2' value={profile.Project_snapShot_URL2} onChange={this.props.handleChange} type='text' label="Project Snapshot URL 2" /></div>
                         <div><Input s={5}   name='Project_Title2' type='text' value={profile.Project_Title2} onChange={this.props.handleChange} label="Project Title 2" /></div>

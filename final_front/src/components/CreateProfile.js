@@ -20,7 +20,7 @@ class CreateProfile extends Component {
                     <Row>
                         <Col s={3}></Col>
                         <Col s={6}>
-                            <iframe className='margin margin-frame img-border' width="350" height="350" src="https://clyp.it/recording-widget" frameBorder="0" style={{ borderRadius: '4px' }}></iframe>
+                            <iframe className='margin margin-frame img-border' width="350" height="350" src="http://clyp.it/recording-widget" frameBorder="0" style={{ borderRadius: '4px' }}></iframe>
                             <div className='App form'>
                                 <Form {...this.props} />  
                             </div>
